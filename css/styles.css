@@ -1,0 +1,60 @@
+body {
+    background-color: #e2e8f0;
+}
+
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    
+    "sidebar header header"
+    "sidebar content content"
+    "sidebar content content"
+    
+    
+    ;
+}
+
+.header {
+    grid-column: 1 / -1;
+    border: 1px solid blue;
+    grid-area: header;
+}
+
+.logo {
+    display: flex;
+}
+
+
+.sidebar {
+    grid-row: 1 / -1;
+    border: 1px solid red;
+    grid-area: sidebar;
+}
+
+.card {
+    background-color: #fff;
+    height: 215px;
+    width: 380px;
+    border-radius: 10px;
+    border-left: 8px solid #f0b428;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px;
+}
+
+.project-info p:first-child {
+    font-size: 20px;
+}
+
+.project-info p:last-child {
+    width: 280px;
+    color: #636363;
+}
+
+.project-links {
+    align-self: flex-end;
+}
