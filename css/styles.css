@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 html, body, .main-container {
     height: 100%;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -11,7 +14,7 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 270px 4fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "sidebar header header header"
@@ -27,21 +30,56 @@ body {
 }
 
 .sidebar {
-
     background-color: #1992D4;
     grid-area: sidebar;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 20px;
 }
 
 .content {
-
-    background-color: #fff;
     grid-area: content;
-
 }
 
 .announcements {
-
     background-color: #1992D4;
     grid-area: announcements;
+}
+
+.logo {
+    display: flex;
+    gap: 15px;
+    padding-left: 20px;
+}
+
+.logo p {
+    align-self: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.top-links ul > li,
+.bottom-links ul > li {
+    display: flex;
+    gap: 15px;  
+}
+
+.top-links ul,
+.bottom-links ul  {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  
+}
+
+.top-links ul > li a:last-child,
+.bottom-links ul > li a:last-child {
+    align-self: center;
+}
+
+.top-links,
+.bottom-links {
+    padding-left: 25px;
 }
 
