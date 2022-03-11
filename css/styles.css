@@ -27,6 +27,7 @@ body {
 
     background-color: #fff;
     grid-area: header;
+    height: 165px;
 }
 
 .sidebar {
@@ -83,3 +84,37 @@ body {
     padding-left: 25px;
 }
 
+.top-side {
+    display: flex;
+    padding-left: 40px;
+    justify-content: space-between;
+}
+
+.left-side ul {
+    margin-top: 15px;
+    display: flex;
+}
+
+.left-side .search {
+    width: 545px;
+    height: 30px;
+    background-color: #d6d6d6;
+    border-radius: 20px;
+    
+}
+
+.right-side ul {
+    margin-top: 15px;
+    padding-right: 70px;
+    display: flex;
+    gap: 30px;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side p {
+    color: #000;
+    font-size: 22px;
+    font-weight: bolder;
+}
