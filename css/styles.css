@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 html, body, .main-container {
     height: 100%;
     width: 100%;
@@ -11,11 +11,15 @@ body {
     background-color: #e2e8f0;
 }
 
+p {
+    color: #000;
+}
+
 
 .main-container {
     display: grid;
-    grid-template-columns: 270px 4fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 350px c 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: 
     "sidebar header header header"
     "sidebar content content announcements"
@@ -24,10 +28,12 @@ body {
 }
 
 .header {
-
     background-color: #fff;
     grid-area: header;
-    height: 165px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .sidebar {
@@ -41,11 +47,21 @@ body {
 
 .content {
     grid-area: content;
+    margin-left: 20px;
+}
+
+.content-cards {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+
 }
 
 .announcements {
     background-color: #1992D4;
     grid-area: announcements;
+    border: 1px solid blue;
 }
 
 .logo {
@@ -90,25 +106,32 @@ body {
     justify-content: space-between;
 }
 
-.left-side ul {
-    margin-top: 15px;
+.bot-side {
     display: flex;
+    padding-left: 40px;
+    justify-content: space-between;
+}
+
+.left-side ul {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 .left-side .search {
-    width: 545px;
-    height: 30px;
-    background-color: #d6d6d6;
+    width: 700px;
+    height: 40px;
+    background-color: #E2E8F0;
     border-radius: 20px;
     
 }
 
 .right-side ul {
-    margin-top: 15px;
-    padding-right: 70px;
+    margin-top: 20px;
+    padding-right: 90px;
     display: flex;
     gap: 30px;
-    margin-right: auto;
     justify-content: center;
     align-items: center;
 }
@@ -116,5 +139,51 @@ body {
 .right-side p {
     color: #000;
     font-size: 22px;
-    font-weight: bolder;
+    font-weight: 600;
+}
+
+.bot-side .left-side p:last-child {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.bot-side .right-side {
+    display: flex;
+    align-items: center;
+}
+
+.bot-side .right-side  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    border-radius: 50px;
+    background-color: #1992D4;
+}
+
+.card {
+    background-color: #fff;
+    height: 215px;
+    width: 380px;
+    border-radius: 10px;
+    border-left: 8px solid #f0b428;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px;
+}
+
+.project-info p:first-child {
+    font-size: 20px;
+}
+
+.project-info p:last-child {
+    width: 280px;
+    color: #636363;
+}
+
+.project-links {
+    align-self: flex-end;
 }
