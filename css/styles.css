@@ -22,7 +22,7 @@ p {
     grid-template-rows: 1fr 2fr 2fr;
     grid-template-areas: 
     "sidebar header header header"
-    "sidebar content content announcements"
+    "sidebar content content  announcements"
     "sidebar content content announcements";
 
 }
@@ -60,6 +60,7 @@ p {
 
 .announcements {
     grid-area: announcements;
+    margin-right: 20px;
 }
 
 .logo {
@@ -172,6 +173,38 @@ p {
     justify-content: space-around;
     padding-left: 25px;
 }
+
+.a-card {
+    background-color: #fff;
+    height: 330px;
+    width: 260px;
+    border-radius: 10px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-card > div {
+    width: 200px;
+    padding: 10px;
+}
+
+.a-card div p:nth-child(2) {
+    color: rgb(150, 150, 150);
+}
+
+.a-card div:nth-child(1) {
+    border-bottom: 1px solid black;
+}
+
+
+.a-card div:nth-child(2) {
+    border-bottom: 1px solid black;
+}
+
+
 
 .project-info p:first-child {
     font-size: 20px;
